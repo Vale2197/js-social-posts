@@ -98,16 +98,64 @@ for (let i = 0; i < posts.length; i++) {
                         </div>
                         <!-- contenuto -->
                         <div class="likes">
-                            <button>
+                            <button id="likeBtn">
                                 <i class="fas fa-thumbs-up"></i>
                                 Mi Piace
                             </button>
-                            <p>
+                            <p class="likesNumber">
                                 Piace a ${post.numeroLikes} persone
                             </p>
                         </div>
                     </div>`
         document.querySelector(".mainContainer").innerHTML += element
     
-}
+    }
 
+
+
+
+    let btn = document.querySelectorAll("#likeBtn");
+
+    console.log(btn);
+
+    for (let i = 0; i < btn.length; i++) {
+        let singleBtn = btn[i];
+         let post = posts[i]
+
+         singleBtn.addEventListener("click", clickLikes)
+
+         function clickLikes () {
+             singleBtn.classList.add("active");
+     
+             post.numeroLikes = post.numeroLikes + 1;
+     
+             console.log(post.numeroLikes);
+             
+         }
+         
+     }
+
+
+     /* let likesDiv = document.querySelectorAll("likesNumber");
+ */
+     /* for (let i = 0; i < likesDiv.length; i++) {
+         let likenumero = likesDiv[i];
+         let button = btn[i];
+         let post = posts[i]
+
+         if (button.classList.contains("active")) {
+             likenumero.innerHTML = `<p class="likesNumber">
+                                    Piace a ${post.numeroLikes + 1} persone
+                                                </p>`
+         }
+         
+     } */
+
+
+    
+    
+    
+
+
+
+   

@@ -83,3 +83,7 @@ h1 {
 .likes button i {
     margin-right: 0.3rem;
 }
+
+.likes .active {
+    color: rgb(255, 154, 154);
+}
