@@ -137,8 +137,8 @@ for (let i = 0; i < posts.length; i++) {
              }
              if (singleBtn.classList.contains("active")) {
                 listaPostLike.push(post.id);
-                console.log(listaPostLike);
-             }
+            }
+            console.log(listaPostLike);
             
          }
         
