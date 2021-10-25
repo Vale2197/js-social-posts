@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #102F45;
+    color: white;
+    font-family: monospace;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+.autore {
+    display: flex;
+    padding: 1rem;
+}
+
+.autore img {
+    border-radius: 50%;
+}
+
+.nomeeData p:first-child {
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.nomeeData p:last-child {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: gray;
+    padding-top: 0.1rem;
+}
+
+.contenuto {
+    padding: 1rem;
+}
+
+.contenuto img {
+    width: 100%;
+}
+
+.contenuto .img {
+    padding: 1rem 0;
+}
+
+.likes {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.likes button {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: grey;
+}
+
+.likes p {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.likes button i {
+    margin-right: 0.3rem;
+}
