@@ -102,54 +102,53 @@ for (let i = 0; i < posts.length; i++) {
                                 <i class="fas fa-thumbs-up"></i>
                                 Mi Piace
                             </button>
-                            <p class="likesNumber">
-                                Piace a ${post.numeroLikes} persone
+                            <p>
+                                Piace a <span class="likesNumber"> ${post.numeroLikes} </span> persone
                             </p>
                         </div>
                     </div>`
         document.querySelector(".mainContainer").innerHTML += element
     
     }
+/* STAMPATO POST A SCHERMO IN HTML */
 
-
-
+    let listaPostLike = []
 
     let btn = document.querySelectorAll("#likeBtn");
 
-    console.log(btn);
+    let likesSpan = document.querySelectorAll(".likesNumber");
 
     for (let i = 0; i < btn.length; i++) {
         let singleBtn = btn[i];
          let post = posts[i]
+        let span = likesSpan[i]
 
          singleBtn.addEventListener("click", clickLikes)
 
          function clickLikes () {
              singleBtn.classList.add("active");
      
-             post.numeroLikes = post.numeroLikes + 1;
-     
              console.log(post.numeroLikes);
-             
+
+             span.innerHTML = post.numeroLikes + 1;
+
+             if (parseInt(span.textContent) > post.numeroLikes + 1) {
+                 post.numeroLikes = post.numeroLikes + 1;
+             }
+             if (singleBtn.classList.contains("active")) {
+                listaPostLike.push(post.id);
+                console.log(listaPostLike);
+             }
+            
          }
+        
+         
          
      }
 
+     
 
-     /* let likesDiv = document.querySelectorAll("likesNumber");
- */
-     /* for (let i = 0; i < likesDiv.length; i++) {
-         let likenumero = likesDiv[i];
-         let button = btn[i];
-         let post = posts[i]
 
-         if (button.classList.contains("active")) {
-             likenumero.innerHTML = `<p class="likesNumber">
-                                    Piace a ${post.numeroLikes + 1} persone
-                                                </p>`
-         }
-         
-     } */
 
 
     
